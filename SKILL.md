@@ -82,6 +82,14 @@ Deck ujian (UTS/UAS) boleh ramping (±8-12 slide, tanpa tugas baru).
 - Kode: Consolas, panel gelap rounded, teks `#c0c5d0`.
 - Rincian tiap konsep dapat slide pendalaman (`add_explain_slide`: 2-3 kalimat + tips 💡).
 
+## Penamaan Deck (standar konsisten — audit 2026-09-19)
+
+Format kebab lowercase, satu konvensi untuk semua MK (lihat skill `mk-iticm` → Konvensi Penamaan / standarisasi-struktur-mk di vault Obsidian):
+
+- `p00-pengantar-kontrak-kuliah.pptx`, `p01-konsep-dasar-….pptx`, `p08-uts.pptx`, `p16-uas.pptx`
+- DILARANG: `P00_Pengantar_…`, `P01-Konsep-Dasar-…` (campuran casing/underscore)
+- Setiap deck WAJIB punya export PDF di `pptx/pdf/` dengan nama sama (audit fase 5: nama PDF == nama deck).
+
 ## Workflow
 
 ### WAJIB: Diskusi → Knowledge → Draft → Generate (sebelum buat pptx)
@@ -99,7 +107,7 @@ Deck ujian (UTS/UAS) boleh ramping (±8-12 slide, tanpa tugas baru).
     Draft"), termasuk stack & pola implementasi. Ini jadi acuan saat bikin draft.
 [3] Buat SATU file draft: pptx/draft/draft-pertemuan.md
     - 17 deck (P00 = pengantar/kontrak-kuliah, P01–P16 = pertemuan)
-    - Filename target pakai prefix konsisten: P##-nama-slug (contoh: P01-pengenalan-ai.pptx)
+    - Filename target pakai prefix konsisten: pXX-slug lowercase (contoh: p01-pengenalan-ai.pptx, p00-pengantar-kontrak-kuliah.pptx)
     - Isi mengikuti kesepakatan di knowledge/ (stack + pendekatan)
 [4] Setiap slide konten (2..sebelum Ringkasan/Tugas) WAJIB punya:
     - Heading `### Slide N — <Judul slot>` (Title/Cards/List/Steps/Explain/Contoh/Diagram/Code/Contoh Soal)
@@ -167,7 +175,7 @@ Untuk course teori murni (tanpa bahasa), slot-slot di atas kembali ke penjelasan
 ```markdown
 ## P01 — <Judul Pertemuan>
 
-**File:** `P01-nama-slug.pptx`
+**File:** `p01-nama-slug.pptx`
 **Sub-CPMK:** Sub-CPMKx | **Bobot:** x% | **Tipe:** Kuliah/Praktikum
 
 ### Slide 1 — Title
