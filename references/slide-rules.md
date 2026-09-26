@@ -52,6 +52,8 @@ Aturan warna tidak boleh diubah per-deck. Kalau ada kebutuhan baru, ubah di sini
    judul JANGAN menjadi "tiruan pola" (mis. semua dimulai "Perbedaan…"). Kalau ≥60% judul
    berpola sama → WARN "menyalin template".
 9. **Angka di judul wajib cocok dengan isi.** "Algoritma dalam 3 fase" tapi ada 4 kartu alur = FAIL.
+   Catatan: angka "bobot" dari RPS bisa milik **rubrik suatu tugas**, bukan bobot nilai MK
+   (lihat `mk-iticm` Pitfalls §A) — jangan dipakai sebagai bobot komponen di deck.
 10. **Slide topik kaya wajib memuat data kejudulan** (bobot 5%, ukuran 8×8, dsb.) — belum tentu
     di judul, tapi judul tidak boleh menjanjikan apa yang isi tidak beri.
 11. **Tidak berlebihan vs bukti.** Klaim "paling akurat", "dijamin" hanya bila isi menyediakan
