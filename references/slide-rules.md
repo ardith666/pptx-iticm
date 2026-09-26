@@ -135,8 +135,31 @@ Aturan warna tidak boleh diubah per-deck. Kalau ada kebutuhan baru, ubah di sini
 7. **Setiap bullet beda sudut pandang.** Dilarang 3 bullet = parafrase ulang satu klaim.
 8. **Angka wajib berunit & berkonteks**: bukan hanya "85%", tapi "85% (presisi, 10-fold CV, dataset
    iris, k=5)". Sumber wajib ada di §6.6.
-9. Embun: narasi speaker-notes (label `> **Narasi:**`) ditulis panjang 3–4 kalimat & menjelaskan
-   *isi plus konteks+alasan*, bukan ringkasan judul.
+9. **Narasi speaker-notes = "cer mengalir, siap dibacakan"** (diperbarui 2026-09-26). Label di
+   draft: `> **Narasi:**`. Isinya **5–8 kalimat (±90–160 kata)**, plain text (tanpa markdown),
+   supaya dosen bisa membacanya langsung di depan kelas.
+   Empat bagian, tanpa perlu label:
+   1. **Pembuka (1 kalimat)** — konteks/analogi/hook.
+   2. **Isi (2–4 kalimat)** — apa itu, bagaimana kerjanya, kenapa penting.
+   3. **Data (1–2 kalimat)** — sebut angka konkret + interpretasinya, bukan mencicil seluruh tabel.
+   4. **Penutup (1 kalimat)** — jahit ke slide berikutnya, atau pertanyaan pemantik.
+
+   **DILARANG** meta-pembuka & template: "Slide ini menjelaskan tentang…", "Pada slide ini
+   kita akan…", "Coba perhatikan…", "Terlihat bahwa…", "Jadi jelas bahwa…", penutup kosong.
+
+   Per tipe slide:
+   - **Kode** → apa yang dikerjakan kode, baris mana yang menentukan, output yang harus muncul, jebakan umum.
+   - **Tabel/angka** → trend + 1–2 angka kunci, bukan dibaca baris per baris.
+   - **Diagram** → alur kiri-ke-kanan + titik keputusan.
+   - **Konsep** → definisi + analogi + batasnya (kapan tidak berlaku).
+
+   ✅ Lolos: "Bayangkan Anda memesan kopi. Pesan Anda masuk ke kasir sebagai satu utuh, lalu kasir
+   memecahnya jadi setiap bahan satu per satu. Forward chaining bekerja persis seperti itu: fakta
+   awal dipecah, dicocokkan ke aturan, lalu kesimpulan baru ditambahkan sebagai fakta berikutnya.
+   Kunci loop while di sini bukan sekadar syntactic sugar — dialah yang menghentikan proses begitu
+   tidak ada fakta baru lagi, yang disebut fixed point. Di slide berikutnya kita lihat kapan loop itu
+   benar-benar berhenti."
+   ❌ Tolak: "Slide ini menjelaskan tentang algoritma A*." (meta, tidak informatif, tak bisa langsung dibaca)
 
 ## §8 — Pemeriksaan & review
 
@@ -187,3 +210,21 @@ Alur wajib sebelum serah terima (semua deck materi):
 
 - Russell & Norvig (2021), Kusumadewi (2003) untuk AI; sumber topik per deck disalin dari
   knowledge/ (KNOWLEDGE.md). Setiap referensi dicantumkan di slide Referensi deck terima.
+
+## §12 — Kedalaman minimum deck (ditambahkan 2026-09-26, dari rebuild IF022)
+
+> Diturunkan dari satu rebuild penuh (Kecerdasan Buatan, 17 deck) + hasil fresh-eyes review.
+> §9 sudah bicara tentang "tanpa batas atas"; §12 ini menetapkan **ambang bawah** supaya
+> "boleh banyak slide" tidak berubah jadi "boleh tipis".
+
+1. **Deck materi = 24–30 slide.** Deck kontrak (P00) boleh 20–22. Deck ujian 10–12 (§10).
+   Total ±400 slide untuk 16 pertemuan — bukan target, hanya konsekuensi dari kepadatan isi.
+2. **Perbesar topik, bukan perbesar slide.** Yang memperbesar slide: menambah **dimensi** baru
+   (Definisi → Mekanisme → Contoh angka → Studi kasus trace → Kode+output → Analisis →
+   Latihan), bukan menambah bullet pada slide yang sudah ada.
+3. **Wajib ada di deck algoritma:** satu slide **"Studi Kasus: Perhitungan Manual"**
+   (trace angka langkah demi langkah) sebelum slide kode — sudah di §9.5; di sini ditegaskan
+   bahwa slide ini **tidak boleh dihapus** demi slide yang lebih ringkas.
+4. **Angka dari sumber terverifikasi**, bukan dikarang. Kalau sumber tidak ada, pakai nilai
+   relatif + "dapat disesuaikan" (§0.5). Angka di judul wajib cocok dengan isi (§2.9).
+5. **Narasi** mengikuti §7.9 (cer mengalir) — bukan ringkasan judul, bukan meta-pembuka.
