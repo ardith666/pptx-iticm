@@ -230,3 +230,27 @@ Alur wajib sebelum serah terima (semua deck materi):
 4. **Angka dari sumber terverifikasi**, bukan dikarang. Kalau sumber tidak ada, pakai nilai
    relatif + "dapat disesuaikan" (§0.5). Angka di judul wajib cocok dengan isi (§2.9).
 5. **Narasi** mengikuti §7.9 (cer mengalir) — bukan ringkasan judul, bukan meta-pembuka.
+## §13 — Diagram alur (ditambahkan 2026-09-26, dari rebuild IF022)
+
+Deck yang membahas alur / siklus / loop **wajib** punya slide diagram (§4.4 §9).
+Aturan teknisnya:
+
+1. **Sumber diagram = blok ` ```mermaid ` di draft**, bukan gambar yang diunggah manual.
+   Draft adalah sumber kebenaran; PNG adalah turunan.
+2. **Render dengan mermaid-cli, bukan draw.io** untuk deck yang diagramnya tidak
+   perlu diedit dosen:
+   ```bash
+   npx -y @mermaid-js/mermaid-cli -i in.mmd -o out.png -s 3 -b white -c config.json
+   ```
+   Skala 3 supaya tajam di proyektor. Dua detik per diagram.
+3. **Ganti mermaid dengan draw.io hanya bila** dosen atau mahasiswa perlu mengedit
+   diagramnya (latihan, tugas). Draw.io desktop CLI (Electron) lambat: ~90 detik
+   per file, sering timeout — pakai `--timeout` + retry + `pkill` bila memakainya.
+4. **Nama PNG memakai nomor SLIDE** (`p06-06.png` = deck p06 slide 6), bukan nomor
+   urut blok. Kalau tidak, renderer tidak akan menemukan gambarnya.
+5. **Rasio gambar ≤ 3:1.** Mermaid kadang menghasilkan tata letak yang terlalu lebar; atur `flowchart: curve`
+   dan tata letak agar tidak gepeng. Gambar yang sangat lebar akan dikecilkan
+   sekecil di slide dan teksnya tak terbaca.
+6. **Pastikan slide diagram benar-benar berisi gambar.** Setelah build, cek bahwa
+   tidak ada placeholder ("[diagram menyusul …]") di deck — ini kegagalan
+   yang sering lolos karena build tetap sukses.
